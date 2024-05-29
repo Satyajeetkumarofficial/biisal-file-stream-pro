@@ -14,7 +14,7 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '25617967'))
     API_HASH = str(getenv('API_HASH', '10555bea1cdfc7d2303fc13b7fd187cc'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7207910496:AAGBei57oKPXQDZ7FiKOYtbat9QIguDm2MU'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7399046982:AAE1mmw8Io-KXrL21J-3hx1dJE-fRLxNDps'))
     name = str(getenv('name', 'filestream_skgbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
