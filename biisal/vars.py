@@ -14,7 +14,7 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '25617967'))
     API_HASH = str(getenv('API_HASH', '10555bea1cdfc7d2303fc13b7fd187cc'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7399046982:AAE1mmw8Io-KXrL21J-3hx1dJE-fRLxNDps'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7207910496:AAGBei57oKPXQDZ7FiKOYtbat9QIguDm2MU'))
     name = str(getenv('name', 'filestream_skgbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
@@ -33,12 +33,12 @@ class Var(object):
     
     else:
         ON_HEROKU = False
-    FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '') else APP_NAME+'.herokuapp.com'
+    FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', 'https://filestream-skgbot1-fcfeebb42566.herokuapp.com/') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',True))
     if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+        URL = "https://filestream-skgbot1-fcfeebb42566.herokuapp.com//".format(FQDN)
     else:
-        URL = "http://{}/".format(FQDN)
+        URL = "https://filestream-skgbot1-fcfeebb42566.herokuapp.com//".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://satyajeetkumarofficial:Guriya50@cluster0.dmmijuh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'FastToLinkFastDownloading')) 
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "")).split()))   
